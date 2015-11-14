@@ -1,0 +1,120 @@
+<template name="quillToolbarAdvanced">
+  <div class="toolbar">
+    <span class="ql-format-group">
+      <select class="ql-font" title="Font">
+        <option selected="" value="sans-serif">Sans Serif</option>
+        <option value="serif">Serif</option>
+        <option value="monospace">Monospace</option>
+      </select>
+      <select class="ql-size" title="Size">
+        <option value="10px">Small</option>
+        <option selected="" value="13px">Normal</option>
+        <option value="18px">Large</option>
+        <option value="32px">Huge</option>
+      </select>
+    </span>
+    <span class="ql-format-group">
+      <span class="ql-format-button ql-bold" title="Bold"></span>
+      <span class="ql-format-separator"></span>
+      <span class="ql-format-button ql-italic" title="Italic"></span>
+      <span class="ql-format-separator"></span>
+      <span class="ql-format-button ql-underline" title="Underline"></span>
+      <span class="ql-format-separator"></span>
+      <span class="ql-format-button ql-strike" title="Strikethrough"></span>
+    </span>
+    <span class="ql-format-group">
+      <select class="ql-color" title="Text Color">
+        <option label="rgb(0, 0, 0)" selected="" value="rgb(0, 0, 0)"></option>
+        <option label="rgb(230, 0, 0)" value="rgb(230, 0, 0)"></option>
+        <option label="rgb(255, 153, 0)" value="rgb(255, 153, 0)"></option>
+        <option label="rgb(255, 255, 0)" value="rgb(255, 255, 0)"></option>
+        <option label="rgb(0, 138, 0)" value="rgb(0, 138, 0)"></option>
+        <option label="rgb(0, 102, 204)" value="rgb(0, 102, 204)"></option>
+        <option label="rgb(153, 51, 255)" value="rgb(153, 51, 255)"></option>
+        <option label="rgb(255, 255, 255)" value="rgb(255, 255, 255)"></option>
+        <option label="rgb(250, 204, 204)" value="rgb(250, 204, 204)"></option>
+        <option label="rgb(255, 235, 204)" value="rgb(255, 235, 204)"></option>
+        <option label="rgb(255, 255, 204)" value="rgb(255, 255, 204)"></option>
+        <option label="rgb(204, 232, 204)" value="rgb(204, 232, 204)"></option>
+        <option label="rgb(204, 224, 245)" value="rgb(204, 224, 245)"></option>
+        <option label="rgb(235, 214, 255)" value="rgb(235, 214, 255)"></option>
+        <option label="rgb(187, 187, 187)" value="rgb(187, 187, 187)"></option>
+        <option label="rgb(240, 102, 102)" value="rgb(240, 102, 102)"></option>
+        <option label="rgb(255, 194, 102)" value="rgb(255, 194, 102)"></option>
+        <option label="rgb(255, 255, 102)" value="rgb(255, 255, 102)"></option>
+        <option label="rgb(102, 185, 102)" value="rgb(102, 185, 102)"></option>
+        <option label="rgb(102, 163, 224)" value="rgb(102, 163, 224)"></option>
+        <option label="rgb(194, 133, 255)" value="rgb(194, 133, 255)"></option>
+        <option label="rgb(136, 136, 136)" value="rgb(136, 136, 136)"></option>
+        <option label="rgb(161, 0, 0)" value="rgb(161, 0, 0)"></option>
+        <option label="rgb(178, 107, 0)" value="rgb(178, 107, 0)"></option>
+        <option label="rgb(178, 178, 0)" value="rgb(178, 178, 0)"></option>
+        <option label="rgb(0, 97, 0)" value="rgb(0, 97, 0)"></option>
+        <option label="rgb(0, 71, 178)" value="rgb(0, 71, 178)"></option>
+        <option label="rgb(107, 36, 178)" value="rgb(107, 36, 178)"></option>
+        <option label="rgb(68, 68, 68)" value="rgb(68, 68, 68)"></option>
+        <option label="rgb(92, 0, 0)" value="rgb(92, 0, 0)"></option>
+        <option label="rgb(102, 61, 0)" value="rgb(102, 61, 0)"></option>
+        <option label="rgb(102, 102, 0)" value="rgb(102, 102, 0)"></option>
+        <option label="rgb(0, 55, 0)" value="rgb(0, 55, 0)"></option>
+        <option label="rgb(0, 41, 102)" value="rgb(0, 41, 102)"></option>
+        <option label="rgb(61, 20, 102)" value="rgb(61, 20, 102)"></option>
+      </select>
+      <!-- <span class="ql-format-separator"></span>
+      <select class="ql-background" title="Background Color">
+        <option label="rgb(0, 0, 0)" value="rgb(0, 0, 0)"></option>
+        <option label="rgb(230, 0, 0)" value="rgb(230, 0, 0)"></option>
+        <option label="rgb(255, 153, 0)" value="rgb(255, 153, 0)"></option>
+        <option label="rgb(255, 255, 0)" value="rgb(255, 255, 0)"></option>
+        <option label="rgb(0, 138, 0)" value="rgb(0, 138, 0)"></option>
+        <option label="rgb(0, 102, 204)" value="rgb(0, 102, 204)"></option>
+        <option label="rgb(153, 51, 255)" value="rgb(153, 51, 255)"></option>
+        <option label="rgb(255, 255, 255)" selected="" value="rgb(255, 255, 255)"></option>
+        <option label="rgb(250, 204, 204)" value="rgb(250, 204, 204)"></option>
+        <option label="rgb(255, 235, 204)" value="rgb(255, 235, 204)"></option>
+        <option label="rgb(255, 255, 204)" value="rgb(255, 255, 204)"></option>
+        <option label="rgb(204, 232, 204)" value="rgb(204, 232, 204)"></option>
+        <option label="rgb(204, 224, 245)" value="rgb(204, 224, 245)"></option>
+        <option label="rgb(235, 214, 255)" value="rgb(235, 214, 255)"></option>
+        <option label="rgb(187, 187, 187)" value="rgb(187, 187, 187)"></option>
+        <option label="rgb(240, 102, 102)" value="rgb(240, 102, 102)"></option>
+        <option label="rgb(255, 194, 102)" value="rgb(255, 194, 102)"></option>
+        <option label="rgb(255, 255, 102)" value="rgb(255, 255, 102)"></option>
+        <option label="rgb(102, 185, 102)" value="rgb(102, 185, 102)"></option>
+        <option label="rgb(102, 163, 224)" value="rgb(102, 163, 224)"></option>
+        <option label="rgb(194, 133, 255)" value="rgb(194, 133, 255)"></option>
+        <option label="rgb(136, 136, 136)" value="rgb(136, 136, 136)"></option>
+        <option label="rgb(161, 0, 0)" value="rgb(161, 0, 0)"></option>
+        <option label="rgb(178, 107, 0)" value="rgb(178, 107, 0)"></option>
+        <option label="rgb(178, 178, 0)" value="rgb(178, 178, 0)"></option>
+        <option label="rgb(0, 97, 0)" value="rgb(0, 97, 0)"></option>
+        <option label="rgb(0, 71, 178)" value="rgb(0, 71, 178)"></option>
+        <option label="rgb(107, 36, 178)" value="rgb(107, 36, 178)"></option>
+        <option label="rgb(68, 68, 68)" value="rgb(68, 68, 68)"></option>
+        <option label="rgb(92, 0, 0)" value="rgb(92, 0, 0)"></option>
+        <option label="rgb(102, 61, 0)" value="rgb(102, 61, 0)"></option>
+        <option label="rgb(102, 102, 0)" value="rgb(102, 102, 0)"></option>
+        <option label="rgb(0, 55, 0)" value="rgb(0, 55, 0)"></option>
+        <option label="rgb(0, 41, 102)" value="rgb(0, 41, 102)"></option>
+        <option label="rgb(61, 20, 102)" value="rgb(61, 20, 102)"></option>
+      </select> -->
+    </span>
+    <span class="ql-format-group">
+      <span class="ql-format-button ql-list" title="List"></span>
+      <span class="ql-format-separator"></span>
+      <span class="ql-format-button ql-bullet" title="Bullet"></span>
+      <span class="ql-format-separator"></span>
+      <select class="ql-align" title="Text Alignment">
+        <option label="Left" selected="" value="left"></option>
+        <option label="Center" value="center"></option>
+        <option label="Right" value="right"></option>
+        <option label="Justify" value="justify"></option>
+      </select>
+    </span>
+    <span class="ql-format-group">
+      <span class="ql-format-button ql-link" title="Link"></span>
+      <span class="ql-format-separator"></span>
+      <span class="ql-format-button ql-image" title="Image"></span>
+    </span>
+  </div>
+</template>
