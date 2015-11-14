@@ -14,8 +14,11 @@ Package.onUse(function (api) {
     'templating',
     'jquery',
     'less',
-    'trever:quill@0.0.5'
+    'trever:quill@0.0.5',
   ], 'client');
+  api.use([
+    'aldeed:autoform@5.4.1',
+  ], 'client', {weak: true});
   api.addFiles([
     'src/quillToolbarAdvanced.html',
     'src/quill.html',

@@ -1,4 +1,5 @@
-TemplateClass = Template.quill
+templateName = 'quill'
+TemplateClass = Template[templateName]
 
 TemplateClass.rendered = ->
   @quill = new Quill @$('.editor')[0],
@@ -8,3 +9,20 @@ TemplateClass.rendered = ->
       'link-tooltip': true
       'image-tooltip': true
     theme: 'snow'
+  $quill = @$('.quill')
+  $quill.data('quill', @quill)
+  $quill.attr('data-schema-key', )
+  value = @data.value
+  @quill.setHTML(value) if value?
+
+TemplateClass.helpers
+  name: -> @atts.name ? @name
+
+Meteor.startup ->
+  AutoForm = Package['aldeed:autoform']?.AutoForm
+  return unless AutoForm?
+  AutoForm.addInputType 'quill',
+    template: templateName
+    valueOut: ->
+      $quill = $(@)
+      $quill.data('quill').getHTML()
