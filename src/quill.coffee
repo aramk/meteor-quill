@@ -11,7 +11,6 @@ TemplateClass.rendered = ->
     theme: 'snow'
   $quill = @$('.quill')
   $quill.data('quill', @quill)
-  $quill.attr('data-schema-key', )
   value = @data.value
   @quill.setHTML(value) if value?
 
