@@ -1,17 +1,17 @@
 // Meteor package definition.
 Package.describe({
   name: 'aramk:quill',
-  version: '0.1.1',
+  version: '1.0.0',
   summary: 'Quill Rich Text Editor',
   git: 'https://github.com/aramk/meteor-quill.git'
 });
 
 Package.onUse(function (api) {
-  api.versionsFrom('METEOR@1.2.0.1');
+  api.versionsFrom('METEOR@1.6.1');
   api.use([
-    'coffeescript',
+    'coffeescript@2.2.1_1',
     'underscore',
-    'templating',
+    'templating@1.3.2',
     'jquery',
     'less',
     'trever:quill@0.0.5'
