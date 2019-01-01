@@ -1,18 +1,21 @@
 templateName = 'quill'
 TemplateClass = Template[templateName]
 
+import Quill from 'quill'
+
 TemplateClass.rendered = ->
   @quill = new Quill @$('.editor')[0],
-    modules:
-      toolbar:
-        container: @$('.toolbar')[0]
-      'link-tooltip': true
-      'image-tooltip': true
-    theme: 'snow'
+    Setter.merge
+      modules:
+        toolbar: true
+      theme: 'snow'
+    , @data.atts.options
   $quill = @$('.quill')
   $quill.data('quill', @quill)
   value = @data.value
-  @quill.setHTML(value) if value?
+  @quill.setContents(value) if value?
+  {onRender} = @data.atts
+  onRender?.apply(@)
 
 TemplateClass.helpers
   name: -> @atts.name ? @name
@@ -24,4 +27,4 @@ Meteor.startup ->
     template: templateName
     valueOut: ->
       $quill = $(@)
-      $quill.data('quill').getHTML()
+      $('.ql-editor', $quill).html()
