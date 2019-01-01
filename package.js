@@ -25,7 +25,6 @@ Package.onUse(function (api) {
     'aldeed:autoform@5.4.1'
   ], 'client', {weak: true});
   api.addFiles([
-    'src/quillToolbarAdvanced.html',
     'src/quill.html',
     'src/quill.coffee',
     'src/quill.less'
