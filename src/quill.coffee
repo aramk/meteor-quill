@@ -2,6 +2,7 @@ templateName = 'quill'
 TemplateClass = Template[templateName]
 
 import Quill from 'quill'
+import 'quill/dist/quill.snow.css';
 
 TemplateClass.rendered = ->
   @quill = new Quill @$('.editor')[0],

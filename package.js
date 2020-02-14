@@ -1,7 +1,7 @@
 // Meteor package definition.
 Package.describe({
   name: 'aramk:quill',
-  version: '2.0.0',
+  version: '2.0.1',
   summary: 'Quill Rich Text Editor',
   git: 'https://github.com/aramk/meteor-quill.git'
 });
@@ -27,6 +27,7 @@ Package.onUse(function (api) {
   api.addFiles([
     'src/quill.html',
     'src/quill.coffee',
+    // 'assets/quill.snow.css',
     'src/quill.less'
   ], 'client');
 });
