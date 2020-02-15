@@ -27,7 +27,6 @@ Package.onUse(function (api) {
   api.addFiles([
     'src/quill.html',
     'src/quill.coffee',
-    // 'assets/quill.snow.css',
     'src/quill.less'
   ], 'client');
 });
