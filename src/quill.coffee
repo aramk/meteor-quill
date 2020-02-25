@@ -14,6 +14,8 @@ TemplateClass.rendered = ->
   $quill = @$('.quill')
   $quill.data('quill', @quill)
   value = @data.value
+  if typeof value == 'string'
+    value = @quill.clipboard.convert(value)
   @quill.setContents(value) if value?
   {onRender} = @data.atts
   onRender?.apply(@)
